@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pickle Paradise | Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">Achaar Garden</div>
+    <nav class="nav-bar">
+    <a href="{{ url_for('veg_pickles') }}">Veg Pickles</a>
+    <a href="{{ url_for('non_veg_pickles') }}">Non-Veg Pickles</a>
+    <a href="{{ url_for('snacks') }}">Snacks</a>
+    <a href="{{ url_for('cart') }}">Cart</a>
+    <a href="{{ url_for('checkout') }}">Checkout</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Achaar Garden</h1>
+      <p>Discover the taste of tradition. Authentic Indian pickles & snacks, freshly made and delivered to your door.</p>
+      <a href="{{ url_for('login') }}" class="btn">Start Shopping</a>
+    </div>
+  </main>
+
+  <!-- Highlight Section -->
+  <section class="highlights">
+    <div class="highlight">
+      <h2>🫙 Handmade Pickles</h2>
+      <p>Each batch is made with love using grandma’s recipes.</p>
+    </div>
+    <div class="highlight">
+      <h2>🌿 100% Natural</h2>
+      <p>No preservatives, no shortcuts — just real flavor.</p>
+    </div>
+    <div class="highlight">
+      <h2>🚚 Fast Delivery</h2>
+      <p>Packed fresh and shipped across India.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Achaar Garden | Taste the tradition of Indian pickles. Made with love, delivered with care.
+  </footer>
+
+</body>
+</html>

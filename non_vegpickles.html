@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Non-Veg Pickles | Pickle Paradise</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo">Pickle Paradise</div>
+    <nav class="nav-bar">
+      <a href="{{ url_for('veg_pickles') }}">Veg Pickles</a>
+      <a href="{{ url_for('non_veg_pickles') }}">Non-Veg Pickles</a>
+      <a href="{{ url_for('snacks') }}">Snacks</a>
+      <a href="{{ url_for('cart') }}">🛒 Cart</a>
+      <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main class="hero">
+    <div class="hero-content">
+      <h1>Explore Our Non-Veg Pickles</h1>
+      <div class="product-grid">
+        {% for product in products %}
+        <div class="product-card">
+          <h2>{{ product.name }}</h2>
+          <ul>
+            {% for weight, price in product.weights.items() %}
+            <li>{{ weight }}g - ₹{{ price }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+<footer>
+    © 2025 Achaar Garden| Taste the tradition of Indian pickles. Made with love, delivered with care.
+  </footer>
+
+</body>
+</html>
+
